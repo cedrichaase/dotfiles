@@ -3,50 +3,61 @@
 	email = cedrichaase@gmail.com
 
 [alias]
-	# "new" commands
-	alias = !git config --get-regexp alias | sed 's/alias\\.\\([^ ]*\\) /\\1 := /'
-	autoadd = !git add -u && git status
-	branches = branch -a --verbose
-	changes = diff --cached
-	checkin = commit -v
-	diffhead = diff HEAD^
-	ff = merge --ff-only
-	fork = checkout -b
-	history = log --pretty=format:'%ad (%an) %h: %s' --date=iso
-	incoming = !git inspect origin/HEAD ^HEAD
-	inspect = log --stat
-	map = !git tree --all
-	recent = log --oneline -n 10
-	recommit = !git checkin --amend
-	restore = reset --hard
-	softdiff = diff --ignore-space-changes
-	tree = log --graph --decorate --oneline
-	unmerged = branch --all --verbose --no-merged
-	unstage = reset HEAD
-	update = remote update --prune
-
-	# shortcuts
-	br = branch
-	ci = !git checkin
-	co = checkout
-	st = status
+  alias = !git config --get-regexp alias | sed 's/alias\\.\\([^ ]*\\) /\\1 := /'
+  autoadd = !git add -u && git status
+  br = branch -v
+  branches = branch -a --verbose
+  changes = diff --cached
+  ci = commit -v
+  co = checkout
+  dc = diff --cached
+  diffhead = diff HEAD^
+  ff = merge --ff-only
+  fork = checkout -b
+  graph = log --graph --decorate --oneline
+  history = log --pretty=format:'%ad (%an) %h: %s' --date=iso
+  incoming = !git inspect origin/HEAD ^HEAD
+  inspect = log --stat
+  map = !git graph --all
+  recent = log --oneline -n 10
+  recommit = !git ci --amend --reuse-message=HEAD
+  restore = reset --hard
+  softdiff = diff --ignore-space-changes
+  show-merged = branch -a --merged
+  show-merged-local = branch -l --merged
+  show-merged-remote = branch -r --merged
+  show-unmerged = branch -a --no-merged
+  show-unmerged-local = branch -l --no-merged
+  show-unmerged-remote = branch -r --no-merged
+  st = status
+  unstage = reset HEAD
+  update = remote update --prune
 
 [core]
-	excludesfile = ~/.gitignore
-	attributesfile = ~/.gitattributes
-	editor = vim
+  attributesfile = ~/.gitattributes
+  excludesfile = ~/.gitignore
+  fsyncobjectfiles = yes
+  whitespace = tab-in-indent
 
 [color]
-	ui = true
+  ui = auto
 
 [clean]
-	requireForce = false
+  requireForce = false
+
+[diff]
+  renamelimit = 0
 
 [merge]
-	tool = vimdiff
+  tool = vimdiff
+
+[pack]
+  threads = 0
 
 [push]
-	default = tracking
+  default = tracking
 
 [receive]
-	denyCurrentBranch = warn
+  denyCurrentBranch = warn
+
+# vim:set ft=gitconfig noet sw=8 ts=8:

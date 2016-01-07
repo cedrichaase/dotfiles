@@ -15,11 +15,5 @@ i3status | while true; do
     append $playing
   fi
 
-  if vpn_active=$(systemctl status vpn | grep -w active); then
-    append "VPN up"
-  else
-    append "VPN down"
-  fi
-
   echo $line
 done

@@ -1,21 +1,6 @@
 [global_config]
   suppress_multiple_term_dialog = True
 [keybindings]
-[profiles]
-  [[default]]
-    scrollbar_position = hidden
-    use_system_font = False
-    font = Fira Mono 11
-    visible_bell = True
-    background_darkness = 0.79
-    scrollback_lines = 2000
-    background_type = transparent
-    background_image = None
-    cursor_color = "#dfd7bb"
-    foreground_color = "#d0d0d0"
-    show_titlebar = False
-    cursor_shape = underline
-    copy_on_selection = True
 [layouts]
   [[default]]
     [[[child1]]]
@@ -192,3 +177,18 @@
       order = 1
       parent = child4
 [plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.79
+    background_image = None
+    background_type = transparent
+    copy_on_selection = True
+    cursor_color = "#dfd7bb"
+    cursor_shape = underline
+    font = Droid Sans Mono 10
+    foreground_color = "#d0d0d0"
+    scrollback_lines = 2000
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+    visible_bell = True

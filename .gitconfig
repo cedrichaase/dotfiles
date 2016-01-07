@@ -1,0 +1,52 @@
+[user]
+	name = Cedric Haase
+	email = cedrichaase@gmail.com
+
+[alias]
+	# "new" commands
+	alias = !git config --get-regexp alias | sed 's/alias\\.\\([^ ]*\\) /\\1 := /'
+	autoadd = !git add -u && git status
+	branches = branch -a --verbose
+	changes = diff --cached
+	checkin = commit -v
+	diffhead = diff HEAD^
+	ff = merge --ff-only
+	fork = checkout -b
+	history = log --pretty=format:'%ad (%an) %h: %s' --date=iso
+	incoming = !git inspect origin/HEAD ^HEAD
+	inspect = log --stat
+	map = !git tree --all
+	recent = log --oneline -n 10
+	recommit = !git checkin --amend
+	restore = reset --hard
+	softdiff = diff --ignore-space-changes
+	tree = log --graph --decorate --oneline
+	unmerged = branch --all --verbose --no-merged
+	unstage = reset HEAD
+	update = remote update --prune
+
+	# shortcuts
+	br = branch
+	ci = !git checkin
+	co = checkout
+	st = status
+
+[core]
+	excludesfile = ~/.gitignore
+	attributesfile = ~/.gitattributes
+	editor = vim
+
+[color]
+	ui = true
+
+[clean]
+	requireForce = false
+
+[merge]
+	tool = vimdiff
+
+[push]
+	default = tracking
+
+[receive]
+	denyCurrentBranch = warn

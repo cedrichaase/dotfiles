@@ -1,0 +1,194 @@
+[global_config]
+  suppress_multiple_term_dialog = True
+[keybindings]
+[profiles]
+  [[default]]
+    scrollbar_position = hidden
+    use_system_font = False
+    font = Fira Mono 11
+    visible_bell = True
+    background_darkness = 0.79
+    scrollback_lines = 2000
+    background_type = transparent
+    background_image = None
+    cursor_color = "#dfd7bb"
+    foreground_color = "#d0d0d0"
+    show_titlebar = False
+    cursor_shape = underline
+    copy_on_selection = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      command = ""
+    [[[window0]]]
+      type = Window
+      parent = ""
+  [[new]]
+    [[[child0]]]
+      position = 0:0
+      type = Window
+      order = 0
+      parent = ""
+      size = 1920, 1080
+    [[[child1]]]
+      position = 540
+      type = VPaned
+      order = 0
+      parent = child0
+    [[[child3]]]
+      position = 267
+      type = VPaned
+      order = 1
+      parent = child1
+    [[[child4]]]
+      position = 960
+      type = HPaned
+      order = 0
+      parent = child3
+    [[[terminal2]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child1
+    [[[terminal5]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child4
+    [[[terminal7]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child3
+    [[[terminal6]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child4
+  [[3tile]]
+    [[[child0]]]
+      position = 0:0
+      type = Window
+      order = 0
+      parent = ""
+      size = 1920, 1080
+    [[[child1]]]
+      position = 960
+      type = HPaned
+      order = 0
+      parent = child0
+    [[[child3]]]
+      position = 540
+      type = VPaned
+      order = 1
+      parent = child1
+    [[[terminal2]]]
+      profile = default
+      command = ncmpcpp -s media-library
+      type = Terminal
+      order = 0
+      parent = child1
+    [[[terminal5]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child3
+      command = ncmpcpp -s playlist
+    [[[terminal4]]]
+      profile = default
+      command = ncmpcpp -s clock
+      type = Terminal
+      order = 0
+      parent = child3
+  [[mpcpp]]
+    [[[child0]]]
+      position = 0:0
+      type = Window
+      order = 0
+      parent = ""
+      size = 1920, 1080
+    [[[child1]]]
+      position = 241
+      type = VPaned
+      order = 0
+      parent = child0
+    [[[child3]]]
+      position = 630
+      type = VPaned
+      order = 1
+      parent = child1
+    [[[child4]]]
+      position = 1240
+      type = HPaned
+      order = 0
+      parent = child3
+    [[[terminal2]]]
+      profile = default
+      command = ncmpcpp -s clock
+      type = Terminal
+      order = 0
+      parent = child1
+    [[[terminal5]]]
+      profile = default
+      type = Terminal
+      order = 0
+      parent = child4
+    [[[terminal7]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child3
+    [[[terminal6]]]
+      profile = default
+      type = Terminal
+      order = 1
+      parent = child4
+  [[mpc]]
+    [[[child0]]]
+      position = 0:0
+      type = Window
+      order = 0
+      parent = ""
+      size = 1920, 1080
+    [[[child1]]]
+      position = 881
+      type = VPaned
+      order = 0
+      parent = child0
+    [[[child2]]]
+      position = 226
+      type = VPaned
+      order = 0
+      parent = child1
+    [[[child4]]]
+      position = 1378
+      type = HPaned
+      order = 1
+      parent = child2
+    [[[terminal3]]]
+      profile = default
+      command = ncmpcpp -s media-library
+      type = Terminal
+      order = 0
+      parent = child2
+    [[[terminal5]]]
+      profile = default
+      command = ncmpcpp -s visualizer
+      type = Terminal
+      order = 0
+      parent = child4
+    [[[terminal7]]]
+      profile = default
+      command = ncmpcpp -s clock
+      type = Terminal
+      order = 1
+      parent = child1
+    [[[terminal6]]]
+      profile = default
+      command = ncmpcpp -s playlist
+      type = Terminal
+      order = 1
+      parent = child4
+[plugins]

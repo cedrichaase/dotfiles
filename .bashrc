@@ -6,6 +6,7 @@
 [[ ${-} = *i* ]] || return
 
 export EDITOR=vim
+export PATH=$PATH:/opt/node/bin
 
 shopt -s checkwinsize
 

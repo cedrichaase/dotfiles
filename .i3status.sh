@@ -7,6 +7,10 @@ function append {
 i3status | while true; do
   read line
 
+  if uptime=$(uptime | grep -Po 'up  \d+\:\d+'); then
+    append "$uptime"
+  fi
+
   if playing=$(mpc | head -1 | grep "-"); then
     append $playing
   fi

@@ -7,7 +7,7 @@ function append {
 i3status | while true; do
   read line
 
-  if uptime=$(uptime | grep -Po 'up  \d+\:\d+'); then
+  if uptime=$(uptime | grep -Po 'up\s*\d+\:?\d*\s*\w*'); then
     append "$uptime"
   fi
 

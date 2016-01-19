@@ -32,6 +32,9 @@ bindsym $mod+w exec firefox
 bindsym $mod+c exec sudo wprotate
 bindsym ctrl+mod1+l exec i3lock -c 000000
 
+# Logitech MX Master gesture button shortcut
+bindsym ctrl+mod1+Tab exec sudo wprotate
+
 # multimedia keybinds
 bindsym XF86AudioMute         exec amixer set Master toggle
 bindsym XF86AudioRaiseVolume  exec amixer set Master 5%+

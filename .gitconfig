@@ -1,6 +1,6 @@
 [user]
 	name = Cedric Haase
-	email = cedrichaase@gmail.com
+	email = cedric@sineband.de
 
 [alias]
   alias = !git config --get-regexp alias | sed 's/alias\\.\\([^ ]*\\) /\\1 := /'

@@ -23,6 +23,7 @@
   recommit = !git ci --amend --reuse-message=HEAD
   restore = reset --hard
   softdiff = diff --ignore-space-changes
+  delete-merged = "!f() { git branch --merged | grep -v "\\*" | xargs -n 1 git branch -d; }; f"
   show-merged = branch -a --merged
   show-merged-local = branch -l --merged
   show-merged-remote = branch -r --merged
@@ -33,6 +34,7 @@
   unstage = reset HEAD
   update = remote update --prune
   remote-branches = "! f() { git for-each-ref --sort=committerdate --format='%(refname:short) * %(authorname) * %(committerdate:relative)' refs/remotes/ | column -t -s '*' | tac; }; f"
+  push-u = "!f() { BRANCH=$(git rev-parse --abbrev-ref HEAD); git push ${1-origin} -u $BRANCH; }; f"
 [core]
   attributesfile = ~/.gitattributes
   excludesfile = ~/.gitignore.global

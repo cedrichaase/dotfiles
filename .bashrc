@@ -66,9 +66,12 @@ scr () {
 # shell prompt
 export PS1="\[$(tput setaf 5)\]\u\[$(tput setaf 7)\]@\[$(tput setaf 5)\]\h \[$(tput bold)\]\[$(tput setaf 6)\]\W \[$(tput setaf 7)\]> \[$(tput sgr0)\]"
 
+source ~/git/z/z.sh
+
 if hash $PREFERRED_SHELL; then
   exec $PREFERRED_SHELL
   return
 fi
 
 echo Falling back to /bin/bash
+

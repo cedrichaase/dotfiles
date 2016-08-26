@@ -1,2 +1,2 @@
-xrandr --dpi 162
+[[ -f ~/.Xmodmap ]] && xmodmap ~/.Xmodmap
 exec i3

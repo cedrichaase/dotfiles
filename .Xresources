@@ -1,5 +1,5 @@
 URxvt*.depth: 32
-URxvt*.background: [80]#000000
+URxvt*.background: rgba:2000/2000/2000/dddd
 ! URxvt*termName:                       string
 ! URxvt*geometry:                       geometry
 ! URxvt*chdir:                          string
@@ -19,7 +19,7 @@ URxvt*scrollBar:                        false
 ! URxvt*scrollTtyKeypress:              boolean
 ! URxvt*scrollWithBuffer:               boolean
 ! URxvt*inheritPixmap:                  boolean
-! URxvt*transparent:                    boolean
+! URxvt*transparent: true
 ! URxvt*tintColor:                      color
 ! URxvt*shading:                        number
 ! URxvt*blurRadius:                     HxV
@@ -37,7 +37,7 @@ URxvt*scrollBar:                        false
 ! URxvt*cursorBlink:                    boolean
 ! URxvt*pointerBlank:                   boolean
 ! URxvt*background:                     color
-! URxvt*foreground:                     color
+URxvt*foreground: 			white
 ! URxvt*color0:                         color
 ! URxvt*color1:                         color
 ! URxvt*color2:                         color
@@ -69,7 +69,7 @@ URxvt*scrollBar:                        false
 ! URxvt*pointerColor2:                  color
 ! URxvt*borderColor:                    color
 ! URxvt*iconFile:                       file
-! URxvt*font:                           fontname
+URxvt*font:       	                xft:Fixed:pixelsize=14
 ! URxvt*boldFont:                       fontname
 ! URxvt*italicFont:                     fontname
 ! URxvt*boldItalicFont:                 fontname
@@ -101,10 +101,11 @@ URxvt*scrollBar:                        false
 ! URxvt*cutchars:                       string
 ! URxvt*answerbackString:               string
 ! URxvt*secondaryScreen:                boolean
-! URxvt*secondaryScroll:                boolean
+URxvt*secondaryScroll:			true
 ! URxvt*perl-lib:                       string
 ! URxvt*perl-eval:                      perl-eval
-! URxvt*perl-ext-common:                string
+! URxvt*perl-ext-common:                string	
+! URxvt*urlLauncher:			firefox
 ! URxvt*perl-ext:                       string
 ! URxvt*iso14755:                       boolean
 ! URxvt*iso14755_52:                    boolean

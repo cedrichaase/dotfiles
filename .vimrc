@@ -10,7 +10,7 @@ set nobackup
 
 set hlsearch
 
-colorscheme desert
+colorscheme sourcerer
 
 highlight SpaceError ctermbg=red guibg=red
 highlight LengthWarn ctermfg=yellow guifg=yellow

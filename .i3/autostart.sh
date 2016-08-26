@@ -22,8 +22,3 @@ if which start_kdeinit >/dev/null 2>&1; then
 fi
 
 compton --config .config/compton.conf &
-
-synclient VertScrollDelta=-111
-synclient HorizScrollDelta=-111
-xrandr --newmode 1440x900 106.50  1440 1528 1672 1904  900 903 909 934 -hsync +vsync
-xrandr --addmode eDP1 1440x900

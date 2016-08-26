@@ -25,3 +25,5 @@ au BufRead,BufNewFile *.vala,*.vapi setfiletype vala
 
 autocmd BufNewFile,BufRead *.mobile.erb let b:eruby_subtype='html'
 autocmd BufRead,BufNewFile *.mobile.erb set filetype=eruby.html
+
+execute pathogen#infect()

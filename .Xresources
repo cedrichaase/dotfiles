@@ -1,5 +1,5 @@
 URxvt*.depth: 32
-URxvt*.background: rgba:2000/2000/2000/dddd
+URxvt*.background: rgba:0500/0500/0500/dddd
 ! URxvt*termName:                       string
 ! URxvt*geometry:                       geometry
 ! URxvt*chdir:                          string
@@ -69,7 +69,7 @@ URxvt*foreground: 			white
 ! URxvt*pointerColor2:                  color
 ! URxvt*borderColor:                    color
 ! URxvt*iconFile:                       file
-URxvt*font:       	                xft:Fixed:pixelsize=14
+URxvt*font:                             xft:Fixed:pixelsize=14
 ! URxvt*boldFont:                       fontname
 ! URxvt*italicFont:                     fontname
 ! URxvt*boldItalicFont:                 fontname

@@ -80,4 +80,55 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
+### git aliases ###
+
+# git status aliases
+alias gst='git status'
+alias gmap='git map'
+
+# git staging aliases
+alias gaddp='git add -p'
+alias gds='git diff --staged'
+alias gci='git ci'
+alias gamend='git ci --amend'
+
+# git rebasing aliases
+alias grb='git rebase'
+alias grbc='git rebase --continue'
+alias grbs='git rebase --skip'
+
+function rebasethis() {
+  [[ ${#} -lt 1 ]] && echo 'Which branch?' && return;
+
+  current=`git rev-parse --abbrev-ref HEAD`
+  master=$1
+
+  git stash
+  git checkout ${master}
+  git pull
+
+  git checkout ${current}
+  git rebase ${master}
+
+  git stash pop
+}
+
+# git remote aliases
+alias gfetch='git fetch'
+alias gup='git update'
+alias gpull='git pull'
+
+
+### other aliases ###
+
+
+### the z ###
 source $HOME/git/z/z.sh
+
+
+
+if [[ $1 == eval ]]; then
+  "$@"
+  set --
+fi

@@ -22,3 +22,6 @@ if which start_kdeinit >/dev/null 2>&1; then
 fi
 
 compton --config .config/compton.conf &
+setxkbmap us &
+
+source ~/.i3/workspace-setup.sh
